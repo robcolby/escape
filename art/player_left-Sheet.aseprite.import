@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://p644gw2flm87"
+path="res://.godot/imported/player_left-Sheet.aseprite-edc4181632db8e9b546de2565b31c62b.res"
+
+[deps]
+
+source_file="res://art/player_left-Sheet.aseprite"
+dest_files=["res://.godot/imported/player_left-Sheet.aseprite-edc4181632db8e9b546de2565b31c62b.res"]
+
+[params]
+
