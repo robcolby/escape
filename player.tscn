@@ -34,7 +34,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_elne4"]
 radius = 40.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
+input_pickable = true
 script = ExtResource("1_a1t8k")
 metadata/_edit_group_ = true
 
@@ -42,8 +43,7 @@ metadata/_edit_group_ = true
 texture_filter = 1
 scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_d2t6t")
-animation = &"left"
-frame_progress = 0.197987
+animation = &"right"
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "output_section": true,

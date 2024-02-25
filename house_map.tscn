@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://jucrr7w6oeji"]
+
+[ext_resource type="Texture2D" uid="uid://bnqos2dw86565" path="res://hardwood_floor-Sheet.png" id="1_iaghn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trw5r"]
+texture = ExtResource("1_iaghn")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_kwlp7"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_trw5r")
+
+[node name="HouseMap" type="TileMap"]
+position = Vector2(224, 336)
+scale = Vector2(7, 7)
+tile_set = SubResource("TileSet_kwlp7")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 65535, 0, 0, 65534, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -65535, 0, 0, 196609, 131072, 0, 131072, 0, 0, 196607, 0, 0, 196606, 0, 0, 131073, 0, 0, 65537, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 0, 0)
