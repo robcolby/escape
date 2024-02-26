@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://jucrr7w6oeji"]
+[gd_scene load_steps=6 format=3 uid="uid://jucrr7w6oeji"]
 
 [ext_resource type="Texture2D" uid="uid://bnqos2dw86565" path="res://hardwood_floor-Sheet.png" id="1_iaghn"]
+[ext_resource type="Texture2D" uid="uid://bd6hbtffpwj8t" path="res://house_tiles-Sheet.png" id="2_j0m0x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trw5r"]
 texture = ExtResource("1_iaghn")
@@ -14,13 +15,35 @@ texture = ExtResource("1_iaghn")
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4nf4"]
+texture = ExtResource("2_j0m0x")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSet" id="TileSet_kwlp7"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_trw5r")
+sources/1 = SubResource("TileSetAtlasSource_a4nf4")
 
 [node name="HouseMap" type="TileMap"]
-position = Vector2(224, 336)
+position = Vector2(111, 171)
 scale = Vector2(7, 7)
 tile_set = SubResource("TileSet_kwlp7")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 65535, 0, 0, 65534, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -65535, 0, 0, 196609, 131072, 0, 131072, 0, 0, 196607, 0, 0, 196606, 0, 0, 131073, 0, 0, 65537, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 0, 0)
+layer_0/tile_data = PackedInt32Array(0, 65537, 805306368, 1, 65537, 1342177280, 65535, 65537, 805306368, 65534, 131073, 805306368, -65538, 65537, 1610612736, -65537, 1, 0, -131072, 1, 0, -131071, 65537, 1342177280, -65535, 65537, 1342177280, 131073, 327681, 805306368, 65537, 65537, 1342177280, -131074, 131073, 1610612736, -131073, 65537, 0, -196608, 65537, 0, -196607, 131073, 0, -2, 65537, 1610612736, -1, 1, 0, -65536, 1, 0, 65536, 1, 0, 131071, 1, 0, 131070, 65537, 1610612736, 196606, 131073, 805306368, 196607, 65537, 805306368, 131072, 65537, 805306368)
