@@ -6,8 +6,11 @@ var screen_size # size of the game window
 func _ready():
 	screen_size = get_viewport_rect().size
 	
-func _physics_process(delta):
-	var velocity = Vector2.ZERO # The players movement vector
+func get_input():
+	velocity.x = 0
+	velocity.y = 0
+	
+	# Identifying keys, will normalize and multiply by speed later
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
 	if Input.is_action_pressed("move_left"):
@@ -17,17 +20,21 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
 	
+	# Turning on or off animation
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
 	
-	position += velocity * delta
-#	position = position.clamp(Vector2.ZERO, screen_size)
-	
+	# Selecting which animation to play
 	if velocity.x > 0:
 		$AnimatedSprite2D.animation = "right"
 	elif velocity.x < 0:
 		$AnimatedSprite2D.animation = "left"
-
+	
+	
+func _physics_process(delta):
+	get_input()
+	move_and_slide()
+	

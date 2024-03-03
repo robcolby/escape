@@ -1,19 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://jucrr7w6oeji"]
 
-[ext_resource type="Texture2D" uid="uid://bnqos2dw86565" path="res://hardwood_floor-Sheet.png" id="1_iaghn"]
 [ext_resource type="Texture2D" uid="uid://bd6hbtffpwj8t" path="res://house_tiles-Sheet.png" id="2_j0m0x"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jgevg"]
+load_path = "res://.godot/imported/hardwood_floor-Sheet.png-5a054d7bc72b242327eaec88bd3f590c.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trw5r"]
-texture = ExtResource("1_iaghn")
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
+texture = SubResource("CompressedTexture2D_jgevg")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4nf4"]
 texture = ExtResource("2_j0m0x")
@@ -23,18 +16,26 @@ texture = ExtResource("2_j0m0x")
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -8, -8, -6.875, 8, -7, 8, -8)
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -6.875, 6.75, -6.625, 6.75, 8, 8, 8, 8, -8)
 3:0/0 = 0
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -8, -8, -6.93849, -5.85573, -7.02687, -5.94412, -8)
+3:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(5.2812, -8, 5.36959, -7.15946, 8, -7.15946, 8, -8)
 4:0/0 = 0
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -6.98268, 8, -8, 5.92795, -8, 5.87834, -8, 5.87834, -7.04409)
+4:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-5.58071, -8, -5.28307, -6.99449, -6.9375, -6.75, -6.9375, 8, -8, 8, -8, -8)
 5:0/0 = 0
 5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.5, 8, -6.87047, -6.99449, -5.28307, -6.94488, -5.38228, -8, -8, -8, -8, 8)
+5:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(5.48149, -7.19291, 6.93231, -7.12719, 6.75, 8, 8, 8, 8, -8, 5.33267, -8)
 
 [sub_resource type="TileSet" id="TileSet_kwlp7"]
 physics_layer_0/collision_layer = 1
