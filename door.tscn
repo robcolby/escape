@@ -1,16 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3w0n0owfm1md"]
+[gd_scene load_steps=3 format=3 uid="uid://c3w0n0owfm1md"]
 
 [ext_resource type="Script" path="res://door.gd" id="1_5lcke"]
-
-[sub_resource type="ImageTexture" id="ImageTexture_y0uhn"]
-
-[sub_resource type="ImageTexture" id="ImageTexture_eicbj"]
+[ext_resource type="Texture2D" uid="uid://cedt718ce6art" path="res://art/door.jpeg" id="2_ch1uv"]
 
 [node name="door" type="Area2D"]
 script = ExtResource("1_5lcke")
-closed_texture = SubResource("ImageTexture_y0uhn")
-open_texture = SubResource("ImageTexture_eicbj")
+closed_texture = ExtResource("2_ch1uv")
+open_texture = ExtResource("2_ch1uv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+position = Vector2(13, 8)
+texture = ExtResource("2_ch1uv")
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
