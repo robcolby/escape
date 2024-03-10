@@ -37,4 +37,7 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
-	
+	var collision_info = move_and_collide(velocity * delta)
+	if collision_info is StaticBody2D:
+		print("Collided with a StaticBody2D")
+

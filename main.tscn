@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cicat0l8b67gq"]
+[gd_scene load_steps=4 format=3 uid="uid://cicat0l8b67gq"]
 
 [ext_resource type="PackedScene" uid="uid://yyuts162655d" path="res://player.tscn" id="1_15sc5"]
 [ext_resource type="PackedScene" uid="uid://jucrr7w6oeji" path="res://house_map.tscn" id="2_wbfdd"]
+[ext_resource type="PackedScene" uid="uid://c3w0n0owfm1md" path="res://door.tscn" id="3_nc62o"]
 
 [node name="main" type="Node2D"]
 
 [node name="HouseMap" parent="." instance=ExtResource("2_wbfdd")]
 
 [node name="Player" parent="." instance=ExtResource("1_15sc5")]
+
+[node name="door" parent="." instance=ExtResource("3_nc62o")]
+position = Vector2(245, 450)
+door_id = "1"
