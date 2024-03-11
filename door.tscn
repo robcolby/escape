@@ -67,5 +67,8 @@ shape = SubResource("RectangleShape2D_qkhxr")
 position = Vector2(34.5, 52.5)
 shape = SubResource("RectangleShape2D_t0fme")
 
+[node name="door_Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_door_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_door_body_exited"]
+[connection signal="timeout" from="door_Timer" to="." method="_on_door_timer_timeout"]
