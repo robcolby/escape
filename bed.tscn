@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b6fv4o7w8libd" path="res://art/bed.png" id="1_wbrsd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x7vkf"]
-size = Vector2(81, 96)
+size = Vector2(81, 102)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sksci"]
 size = Vector2(144, 141)
@@ -32,7 +32,7 @@ metadata/_aseprite_wizard_interface_config_ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(-0.5, 3)
 shape = SubResource("RectangleShape2D_x7vkf")
 
 [node name="Area2D" type="Area2D" parent="."]
