@@ -1,6 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://jucrr7w6oeji"]
+[gd_scene load_steps=13 format=3 uid="uid://jucrr7w6oeji"]
 
+[ext_resource type="Texture2D" uid="uid://dkx3ei755hwvm" path="res://art/house_tiles2-Sheet.png" id="2_7ww5b"]
 [ext_resource type="Texture2D" uid="uid://bd6hbtffpwj8t" path="res://house_tiles-Sheet.png" id="2_j0m0x"]
+[ext_resource type="PackedScene" uid="uid://bfdiss7ev5i0s" path="res://toilet.tscn" id="3_lqc2p"]
+[ext_resource type="PackedScene" uid="uid://bc6o6aonp3se7" path="res://bed.tscn" id="4_5s21s"]
+[ext_resource type="PackedScene" uid="uid://dftx31jk7v4kk" path="res://tub.tscn" id="5_bkesv"]
+[ext_resource type="PackedScene" uid="uid://c3w0n0owfm1md" path="res://door.tscn" id="6_qiurp"]
+[ext_resource type="PackedScene" uid="uid://0g8htvoqdt2x" path="res://sink.tscn" id="7_ifse8"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jgevg"]
 
@@ -36,14 +42,117 @@ texture = ExtResource("2_j0m0x")
 5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.5, 8, -6.87047, -6.99449, -5.28307, -6.94488, -5.38228, -8, -8, -8, -8, 8)
 5:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(5.48149, -7.19291, 6.93231, -7.12719, 6.75, 8, 8, 8, 8, -8, 5.33267, -8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d8ds5"]
+texture = ExtResource("2_7ww5b")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -7.09375, 8, -7.15625, 8, -8)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -7.09375, 6.90625, -7.03125, 7.0625, 8, 8, 8, 8, -8)
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -5.1875, -8, -5.25, -7.09375, -8, -7.125)
+3:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(4.79507, -8, 4.79507, -7.26994, 8, -7.00478, 8, -7.00478, 8, -8)
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.21875, -8, 5.21875, -7.09375, 8, -7.0625, 8, -8)
+4:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-5.72315, -8, -5.67895, -7.13736, -7.04897, -7.18155, -7.00478, 8, -8, 8, -8, -8)
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.43588, -8, 5.3475, -7.15946, 6.98268, -7.02687, 6.98268, 8, 8, 8, 8, -8)
+5:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-5.89992, -8, -5.89992, -6.96058, -6.96058, -7.04897, -7.00478, 8, -8, 8, -8, -8)
+
 [sub_resource type="TileSet" id="TileSet_kwlp7"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_trw5r")
 sources/1 = SubResource("TileSetAtlasSource_a4nf4")
+sources/2 = SubResource("TileSetAtlasSource_d8ds5")
 
 [node name="HouseMap" type="TileMap"]
 position = Vector2(111, 171)
 scale = Vector2(7, 7)
 tile_set = SubResource("TileSet_kwlp7")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 65537, 805306368, 1, 65537, 1342177280, 65535, 65537, 805306368, 65534, 131073, 805306368, -65538, 65537, 1610612736, -65537, 1, 0, -131072, 1, 0, -131071, 65537, 1342177280, -65535, 65537, 1342177280, 131073, 262145, 805306368, 65537, 65537, 1342177280, -131074, 131073, 1610612736, -131073, 65537, 0, -196608, 65537, 0, -196607, 131073, 0, -2, 65537, 1610612736, -1, 1, 0, -65536, 1, 0, 65536, 196609, 1342177280, 131071, 1, 0, 131070, 65537, 1610612736, 196606, 131073, 805306368, 196607, 65537, 805306368, 131072, 131073, 1342177280)
+layer_0/tile_data = PackedInt32Array(0, 65538, 805306368, 1, 65538, 1342177280, 65535, 65538, 805306368, 65534, 131074, 805306368, -65538, 131074, 1610612736, -65537, 65538, 0, -131072, 65538, 0, -131071, 131074, 0, -65535, 65538, 1342177280, 131073, 262146, 805306368, 65537, 65538, 1342177280, -2, 65538, 1610612736, -1, 2, 0, -65536, 2, 0, 65536, 196610, 1342177280, 131071, 2, 0, 131070, 131074, 805306368, 196606, 131074, 805306368, 196607, 65538, 805306368, 131072, 131074, 1342177280, 196609, 65538, 805306368, 196608, 196610, 805306368, 262143, 262146, 1610612736, 262144, 2, 0, 327679, 65538, 1610612736, 458751, 131074, 805306368, 393217, 131074, 1342177280, 262145, 65538, 1342177280, 393215, 65538, 1610612736, 393216, 65538, 805306368, 327681, 65538, 1342177280, 327680, 2, 0, 196610, 196610, 805306368, 131075, 131074, 1342177280, 131074, 196610, 805306368, 65538, 65538, 0, 65539, 131074, 0, 196612, 65538, 805306368, 262146, 2, 0, 196614, 131074, 1342177280, 65542, 131074, 0, 65540, 65538, 0, 65541, 65538, 0, 131078, 65538, 1342177280, 196613, 65538, 805306368, 131076, 2, 0, 131077, 2, 0, 196611, 262146, 1879048192, 262147, 2, 0, 262148, 65538, 1342177280, 393218, 65538, 805306368, 393220, 131074, 1342177280, 393219, 65538, 805306368, 327684, 65538, 1342177280, 327682, 2, 0, 327683, 2, 0)
+
+[node name="toilet2" parent="." instance=ExtResource("3_lqc2p")]
+position = Vector2(-22.1429, 38.8571)
+rotation = -1.57035
+scale = Vector2(0.142857, 0.142857)
+toilet_id = "1"
+
+[node name="Gtoilet" parent="." instance=ExtResource("3_lqc2p")]
+position = Vector2(37.8571, 25.2857)
+scale = Vector2(0.142857, 0.142857)
+toilet_id = "2"
+
+[node name="Bed" parent="." instance=ExtResource("4_5s21s")]
+position = Vector2(-0.857142, -19.5714)
+scale = Vector2(0.194285, 0.194285)
+
+[node name="tub" parent="." instance=ExtResource("5_bkesv")]
+position = Vector2(-20.8571, 20.5714)
+scale = Vector2(0.194285, 0.194285)
+
+[node name="M door" parent="." instance=ExtResource("6_qiurp")]
+position = Vector2(19.1429, 39.8571)
+scale = Vector2(0.142857, 0.142857)
+door_id = "1"
+
+[node name="MBR door" parent="." instance=ExtResource("6_qiurp")]
+position = Vector2(7.71428, 29.1429)
+rotation = -1.56758
+scale = Vector2(0.142857, 0.142857)
+door_id = "2"
+
+[node name="tub2" parent="." instance=ExtResource("5_bkesv")]
+position = Vector2(55.1429, 20.5714)
+scale = Vector2(0.142857, 0.142857)
+
+[node name="GBR door" parent="." instance=ExtResource("6_qiurp")]
+position = Vector2(35.2857, 39.8571)
+scale = Vector2(0.142857, 0.142857)
+door_id = "3"
+
+[node name="sink" parent="." instance=ExtResource("7_ifse8")]
+position = Vector2(51.4286, 38.5714)
+rotation = -3.13875
+scale = Vector2(0.142857, 0.142857)
+
+[node name="sink2" parent="." instance=ExtResource("7_ifse8")]
+position = Vector2(6.71428, 34)
+rotation = 1.57195
+scale = Vector2(0.142857, 0.142857)
+
+[node name="DDoor" parent="." instance=ExtResource("6_qiurp")]
+position = Vector2(12.7143, 71.1428)
+rotation = -3.13755
+scale = Vector2(0.142857, 0.142857)
+door_id = "6"
+
+[node name="G1Door" parent="." instance=ExtResource("6_qiurp")]
+position = Vector2(45.2857, 71.1429)
+rotation = -3.13755
+scale = Vector2(0.142857, 0.142857)
+door_id = "5"
+
+[node name="Hall Door2" parent="." instance=ExtResource("6_qiurp")]
+position = Vector2(-7.85714, 51.2857)
+rotation = -4.71313
+scale = Vector2(0.142857, 0.142857)
+door_id = "7"
+
+[node name="G2Door" parent="." instance=ExtResource("6_qiurp")]
+position = Vector2(71, 51.4284)
+rotation = -4.71239
+scale = Vector2(0.142857, 0.142857)
+door_id = "4"

@@ -1,35 +1,38 @@
-extends Area2D
+extends StaticBody2D
 
-@export var closed_texture: Texture
-@export var open_texture: Texture
+@export var door_id: String = ""
 var is_open = false
+var at_door = false
 
-# Reference to the Sprite and CollisionShape2D nodes
-@onready var sprite = $Sprite
-@onready var collision_shape = $CollisionShape2D
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	sprite.texture = closed_texture
-	collision_shape.disabled = false # Door starts as closed
+	$CollisionShape2D.disabled = false # Door starts as closed
+	$door_Timer.stop() # Ensure timer is off
 
-func _on_Door_body_entered(body):
+func _on_door_body_entered(body):
 	if body.name == "Player":
-		print("Player can open the door")
+		at_door = true
+		print("Player can trigger the door, ", door_id)
 
-func _on_Door_body_exited(body):
+func _on_door_body_exited(body):
 	if body.name == "Player":
-		print("Player left the door")
+		at_door = false
+		print("Player cannot trigger the door, ", door_id)
 
-func _input(event):
-	if event.is_action_pressed("ui_accept") and is_inside_tree():
-		toggle_door()
+func _on_door_timer_timeout():
+	$door_Timer.stop()
+	
+func get_input():
+	if Input.is_action_pressed("trigger_action") and at_door == true and $door_Timer.is_stopped():
+		$door_Timer.start() # method of ensuring keypress delay between actions
+		if door_id == "7":
+			print ("You don't have the key")
+			return
+		is_open = !is_open
+		$CollisionShape2D.disabled = is_open # Disable collision if door is open
+		if $AnimatedSprite2D.frame == 0:
+			$AnimatedSprite2D.set_frame (1)
+		else:
+			$AnimatedSprite2D.set_frame (0)
 
-func toggle_door():
-	is_open = !is_open
-	sprite.texture = open_texture if is_open else closed_texture
-	collision_shape.disabled = is_open # Disable collision if door is open
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta): 
-#	pass
+func _process(delta): 
+	get_input()

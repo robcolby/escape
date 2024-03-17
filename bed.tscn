@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc6o6aonp3se7"]
+
+[ext_resource type="Texture2D" uid="uid://b6fv4o7w8libd" path="res://art/bed.png" id="1_wbrsd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7vkf"]
+size = Vector2(81, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sksci"]
+size = Vector2(144, 141)
+
+[node name="Bed" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(7, 7)
+texture = ExtResource("1_wbrsd")
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "res://art",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"slice": "",
+"source": "res://art/bed.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"output_section": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_x7vkf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 13.5)
+shape = SubResource("RectangleShape2D_sksci")

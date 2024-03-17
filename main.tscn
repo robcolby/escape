@@ -6,5 +6,8 @@
 [node name="main" type="Node2D"]
 
 [node name="HouseMap" parent="." instance=ExtResource("2_wbfdd")]
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("1_15sc5")]
+position = Vector2(-34, 61)
+metadata/_edit_lock_ = true

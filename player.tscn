@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://yyuts162655d"]
 
-[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_a1t8k"]
+[ext_resource type="Script" path="res://player.gd" id="1_gfg0j"]
 [ext_resource type="Texture2D" uid="uid://8a217ju8pjti" path="res://art/l0.tres" id="2_e461m"]
 [ext_resource type="Texture2D" uid="uid://c1hpj7lp3rhrl" path="res://art/l1.tres" id="3_v6cs6"]
 [ext_resource type="Texture2D" uid="uid://b73ex60ba6aky" path="res://art/r0.tres" id="4_5rgs4"]
@@ -36,18 +36,18 @@ radius = 33.0151
 
 [node name="Player" type="CharacterBody2D"]
 input_pickable = true
-script = ExtResource("1_a1t8k")
+script = ExtResource("1_gfg0j")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_d2t6t")
-animation = &"right"
+animation = &"left"
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "output_section": true,
-"slice_section": true
+"slice_section": false
 }
 metadata/_aseprite_wizard_config_ = {
 "layer": "",

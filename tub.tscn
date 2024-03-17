@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://dftx31jk7v4kk"]
+
+[ext_resource type="Texture2D" uid="uid://q455axb04inq" path="res://art/tub.png" id="1_5q8ql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0507q"]
+size = Vector2(99, 49)
+
+[node name="tub" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 0.011258
+scale = Vector2(7, 7)
+texture = ExtResource("1_5q8ql")
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "res://art",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"slice": "",
+"source": "res://art/tub.ase"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"output_section": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3.5)
+shape = SubResource("RectangleShape2D_0507q")

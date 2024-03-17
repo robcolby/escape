@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://0g8htvoqdt2x"]
+
+[ext_resource type="Texture2D" uid="uid://dxdkeysn2urui" path="res://art/sink.png" id="1_5mxmi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pc5fy"]
+size = Vector2(65, 36)
+
+[node name="sink" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(7, 7)
+texture = ExtResource("1_5mxmi")
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "res://art",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"slice": "",
+"source": "res://art/sink.ase"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"output_section": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, -37)
+shape = SubResource("RectangleShape2D_pc5fy")

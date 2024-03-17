@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://d02bvjpk14qi1"
+path="res://.godot/imported/door-Sheet.ase-417bddf91ba700ed6c57de5f24c9ba3e.res"
+
+[deps]
+
+source_file="res://art/door-Sheet.ase"
+dest_files=["res://.godot/imported/door-Sheet.ase-417bddf91ba700ed6c57de5f24c9ba3e.res"]
+
+[params]
+

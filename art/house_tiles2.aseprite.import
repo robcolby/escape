@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://lhrsp66kr3ew"
+path="res://.godot/imported/house_tiles2.aseprite-119e8e7264f630db88ebc6595a2f4c28.res"
+
+[deps]
+
+source_file="res://art/house_tiles2.aseprite"
+dest_files=["res://.godot/imported/house_tiles2.aseprite-119e8e7264f630db88ebc6595a2f4c28.res"]
+
+[params]
+
