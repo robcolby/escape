@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfdiss7ev5i0s"]
+[gd_scene load_steps=5 format=3 uid="uid://bfdiss7ev5i0s"]
 
 [ext_resource type="Texture2D" uid="uid://nn6tk2fgbois" path="res://art/toilet.png" id="1_dyim0"]
+[ext_resource type="Script" path="res://toilet.gd" id="1_qrrcm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fo0po"]
 size = Vector2(37, 52)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2ypp"]
+size = Vector2(37, 23)
+
 [node name="toilet" type="StaticBody2D"]
+script = ExtResource("1_qrrcm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -31,3 +36,12 @@ metadata/_aseprite_wizard_interface_config_ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3.5, -29)
 shape = SubResource("RectangleShape2D_fo0po")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3.5, 3.5)
+shape = SubResource("RectangleShape2D_s2ypp")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_toilet_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

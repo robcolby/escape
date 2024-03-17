@@ -9,6 +9,7 @@ size = Vector2(99, 49)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+rotation = 0.011258
 scale = Vector2(7, 7)
 texture = ExtResource("1_5q8ql")
 metadata/_aseprite_wizard_config_ = {
