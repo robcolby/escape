@@ -1,46 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://jucrr7w6oeji"]
+[gd_scene load_steps=11 format=3 uid="uid://jucrr7w6oeji"]
 
 [ext_resource type="Texture2D" uid="uid://dkx3ei755hwvm" path="res://art/house_tiles2-Sheet.png" id="2_7ww5b"]
-[ext_resource type="Texture2D" uid="uid://bd6hbtffpwj8t" path="res://house_tiles-Sheet.png" id="2_j0m0x"]
-[ext_resource type="PackedScene" uid="uid://bfdiss7ev5i0s" path="res://toilet.tscn" id="3_lqc2p"]
-[ext_resource type="PackedScene" uid="uid://bc6o6aonp3se7" path="res://bed.tscn" id="4_5s21s"]
-[ext_resource type="PackedScene" uid="uid://dftx31jk7v4kk" path="res://tub.tscn" id="5_bkesv"]
-[ext_resource type="PackedScene" uid="uid://c3w0n0owfm1md" path="res://door.tscn" id="6_qiurp"]
-[ext_resource type="PackedScene" uid="uid://0g8htvoqdt2x" path="res://sink.tscn" id="7_ifse8"]
+[ext_resource type="PackedScene" uid="uid://bfdiss7ev5i0s" path="res://scenes/toilet.tscn" id="3_u541b"]
+[ext_resource type="PackedScene" uid="uid://bc6o6aonp3se7" path="res://scenes/bed.tscn" id="4_5s21s"]
+[ext_resource type="PackedScene" uid="uid://dftx31jk7v4kk" path="res://scenes/tub.tscn" id="5_bkesv"]
+[ext_resource type="PackedScene" uid="uid://c3w0n0owfm1md" path="res://scenes/door.tscn" id="6_qiurp"]
+[ext_resource type="PackedScene" uid="uid://0g8htvoqdt2x" path="res://scenes/sink.tscn" id="7_824eh"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jgevg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trw5r"]
 texture = SubResource("CompressedTexture2D_jgevg")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4nf4"]
-texture = ExtResource("2_j0m0x")
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -8, -8, -6.875, 8, -7, 8, -8)
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -6.875, 6.75, -6.625, 6.75, 8, 8, 8, 8, -8)
-3:0/0 = 0
-3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:0/0/physics_layer_0/angular_velocity = 0.0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -8, -8, -6.93849, -5.85573, -7.02687, -5.94412, -8)
-3:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(5.2812, -8, 5.36959, -7.15946, 8, -7.15946, 8, -8)
-4:0/0 = 0
-4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:0/0/physics_layer_0/angular_velocity = 0.0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -6.98268, 8, -8, 5.92795, -8, 5.87834, -8, 5.87834, -7.04409)
-4:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-5.58071, -8, -5.28307, -6.99449, -6.9375, -6.75, -6.9375, 8, -8, 8, -8, -8)
-5:0/0 = 0
-5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-5:0/0/physics_layer_0/angular_velocity = 0.0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.5, 8, -6.87047, -6.99449, -5.28307, -6.94488, -5.38228, -8, -8, -8, -8, 8)
-5:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(5.48149, -7.19291, 6.93231, -7.12719, 6.75, 8, 8, 8, 8, -8, 5.33267, -8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d8ds5"]
 texture = ExtResource("2_7ww5b")
@@ -74,7 +44,6 @@ texture = ExtResource("2_7ww5b")
 [sub_resource type="TileSet" id="TileSet_kwlp7"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_trw5r")
-sources/1 = SubResource("TileSetAtlasSource_a4nf4")
 sources/2 = SubResource("TileSetAtlasSource_d8ds5")
 
 [node name="HouseMap" type="TileMap"]
@@ -84,13 +53,13 @@ tile_set = SubResource("TileSet_kwlp7")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 65538, 805306368, 1, 65538, 1342177280, 65535, 65538, 805306368, 65534, 131074, 805306368, -65538, 131074, 1610612736, -65537, 65538, 0, -131072, 65538, 0, -131071, 131074, 0, -65535, 65538, 1342177280, 131073, 262146, 805306368, 65537, 65538, 1342177280, -2, 65538, 1610612736, -1, 2, 0, -65536, 2, 0, 65536, 196610, 1342177280, 131071, 2, 0, 131070, 131074, 805306368, 196606, 131074, 805306368, 196607, 65538, 805306368, 131072, 131074, 1342177280, 196609, 65538, 805306368, 196608, 196610, 805306368, 262143, 262146, 1610612736, 262144, 2, 0, 327679, 65538, 1610612736, 458751, 131074, 805306368, 393217, 131074, 1342177280, 262145, 65538, 1342177280, 393215, 65538, 1610612736, 393216, 65538, 805306368, 327681, 65538, 1342177280, 327680, 2, 0, 196610, 196610, 805306368, 131075, 131074, 1342177280, 131074, 196610, 805306368, 65538, 65538, 0, 65539, 131074, 0, 196612, 65538, 805306368, 262146, 2, 0, 196614, 131074, 1342177280, 65542, 131074, 0, 65540, 65538, 0, 65541, 65538, 0, 131078, 65538, 1342177280, 196613, 65538, 805306368, 131076, 2, 0, 131077, 2, 0, 196611, 262146, 1879048192, 262147, 2, 0, 262148, 65538, 1342177280, 393218, 65538, 805306368, 393220, 131074, 1342177280, 393219, 65538, 805306368, 327684, 65538, 1342177280, 327682, 2, 0, 327683, 2, 0)
 
-[node name="toilet2" parent="." instance=ExtResource("3_lqc2p")]
+[node name="toilet2" parent="." instance=ExtResource("3_u541b")]
 position = Vector2(-22.1429, 38.8571)
 rotation = -1.57035
 scale = Vector2(0.142857, 0.142857)
 toilet_id = "1"
 
-[node name="Gtoilet" parent="." instance=ExtResource("3_lqc2p")]
+[node name="Gtoilet" parent="." instance=ExtResource("3_u541b")]
 position = Vector2(37.8571, 25.2857)
 scale = Vector2(0.142857, 0.142857)
 toilet_id = "2"
@@ -101,6 +70,7 @@ scale = Vector2(0.194285, 0.194285)
 
 [node name="tub" parent="." instance=ExtResource("5_bkesv")]
 position = Vector2(-20.8571, 20.5714)
+rotation = -0.0111665
 scale = Vector2(0.194285, 0.194285)
 
 [node name="M door" parent="." instance=ExtResource("6_qiurp")]
@@ -123,12 +93,12 @@ position = Vector2(35.2857, 39.8571)
 scale = Vector2(0.142857, 0.142857)
 door_id = "3"
 
-[node name="sink" parent="." instance=ExtResource("7_ifse8")]
+[node name="sink" parent="." instance=ExtResource("7_824eh")]
 position = Vector2(51.4286, 38.5714)
 rotation = -3.13875
 scale = Vector2(0.142857, 0.142857)
 
-[node name="sink2" parent="." instance=ExtResource("7_ifse8")]
+[node name="sink2" parent="." instance=ExtResource("7_824eh")]
 position = Vector2(6.71428, 34)
 rotation = 1.57195
 scale = Vector2(0.142857, 0.142857)

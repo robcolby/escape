@@ -11,12 +11,12 @@ func _ready():
 func _on_door_body_entered(body):
 	if body.name == "Player":
 		at_door = true
-		print("Player can trigger the door, ", door_id)
+		#print("Player can trigger the door, ", door_id)
 
 func _on_door_body_exited(body):
 	if body.name == "Player":
 		at_door = false
-		print("Player cannot trigger the door, ", door_id)
+		#print("Player cannot trigger the door, ", door_id)
 
 func _on_door_timer_timeout():
 	$door_Timer.stop()
